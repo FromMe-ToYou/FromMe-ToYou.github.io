@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>for you</title>
+  <style>
+    body {
+      font-family: serif;
+      background: #f8f8f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #content {
+      display: none;
+      max-width: 600px;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<div id="lock">
+  <p>enter the password</p>
+  <input type="password" id="pw" />
+</div>
+
+<div id="content">
+  <h1>hi</h1>
+  <p>i made this for you.</p>
+</div>
+
+<script>
+  const correctPassword = "open-sesame";
+
+  document.getElementById("pw").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      if (this.value === correctPassword) {
+        document.getElementById("lock").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      } else {
+        alert("try again");
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
