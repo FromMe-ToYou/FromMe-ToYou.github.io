@@ -30,6 +30,9 @@
 <div id="lock">
   <p>enter the password</p>
   <input type="password" id="pw" />
+    <p style="font-size:14px; color:#888; margin-top:5px;">
+    hint: our anniversary :)
+  </p>
 </div>
 
 <div id="content">
@@ -72,7 +75,7 @@ And hopefully one day I will truly know you<br>
 </div>
 
 <script>
-  const correctPassword = "open-sesame";
+  const correctPassword = "January 1";
 
   document.getElementById("pw").addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
